@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     # Django allauth packages
     'allauth',
     'allauth.account',
+
+    'profiles',
 ]
 
 
