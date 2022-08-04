@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     # Django allauth packages
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
 
     'profiles',
+    'homes',
 ]
 
 
@@ -74,6 +76,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -91,6 +94,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 # Authentication backends
 AUTHENTICATION_BACKENDS = [
@@ -161,6 +165,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = True
 
 LOGIN_REDIRECT_URL = 'index'
