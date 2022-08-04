@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% load static %} {% block main %}
+
+<h1>Hello from Index</h1>
+
+<h2>Fullname: {{ user.get_full_name }}</h2>
+<ul>
+  <li>Username: {{ user.username }}</li>
+  <li>Location: {{ user.profile.location }}</li>
+  <li>Birth Date: {{ user.profile.birth_date }}</li>
+</ul>
+
+{% endblock %}
