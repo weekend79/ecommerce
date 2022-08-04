@@ -8,7 +8,7 @@
         <meta name="Description" content="Enter your description here"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="static/css/style.css">
         <title>E-Commerce! - Your no.1 E-Commerce App!</title>
     </head>
     <body>
@@ -23,10 +23,10 @@
                     <li><a class="nav-link" href="#"><i class="far fa-address-card"></i>About M2ndB</a></li>
                     {% if user.is_authenticated %}
                     <li><a class="nav-link active" href="#"><i class ="fa fa-user"></i> Profile <span class="sr-only">(current)</span></a></li>
-                    <li><a class="nav-link" href="#"><i class ="fa fa-sign-out"></i> Logout</a></li>
+                    <li><a class="nav-link" href="{% url 'account_logout' %}"><i class ="fa fa-sign-out"></i> Logout</a></li>
                     {% else %}
-                    <li><a class="nav-link" href="#"><i class ="fa fa-sign-in"></i> Login</a></li>
-                    <li><a class="nav-link" href="#"><i class ="fa fa-user-plus"></i> Sign Up</a></li>
+                    <li><a class="nav-link" href="{% url 'account_login' %}"><i class ="fa fa-sign-in"></i> Login</a></li>
+                    <li><a class="nav-link" href="{% url 'account_signup' %}"><i class ="fa fa-user-plus"></i> Sign Up</a></li>
                     {% endif %}
                     <li><a class="nav-link" href="#"><i class="fa fa-at"></i> Contact Us</a></li>
                     
@@ -51,7 +51,7 @@
         {% block main %}
         {% endblock %}
         <footer>
-            <h1>Footlose</h1>
+            <h1>E-Commerce</h1>
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
